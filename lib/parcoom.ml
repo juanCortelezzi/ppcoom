@@ -1,5 +1,12 @@
 open Base
 
+type parser_input =
+  { text : string
+  ; pos : int
+  }
+
+(* let advance_input input len = *)
+
 type 'a parser = string -> (string * 'a, string) Result.t
 
 let character (c : char) : char parser =
